@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>{{title}}</h1>
+        <p>API</p>
+        <ul>
+            <li><dialog>Login</dialog>
+                <ul>
+                    <li><span>[get]</span><a href="/login">/login</a><legend>Authenticate</legend></li>
+                    <li><span>[get]</span><a href="/logout">/logout</a><legend>LogOut</legend></li>
+                </ul>
+            </li>
+            <li><dialog>Product</dialog>
+                <ul>
+                    <li><span>[get]</span>/product/:sku<legend>Query for product Information</legend></li>
+                    <li><span>[get]</span>/product/:sku/:bid<legend>Bid on product SKU is requireed</legend></li>
+                </ul>
+            </li>
+            <li><dialog>Deals</dialog>
+                <ul>
+                    <li><span>[post]</span>/deal/accept/:id<legend>Start a deal.</legend></li>
+                    <li><span>[post]</span>/deal/join/:id<legend>Join on a started deal.</legend></li>
+                    <li><span>[get]</span>/deal/:id<legend>Deal Information</legend></li>
+                    <li><span>[get]</span>/deals<legend>Retrive Commited Deals</legend></li>
+                    <li><span>[get]</span>/deals/seller<legend>Retrive Running Deals for Sellers</legend></li>
+                </ul>
+            </li>
+            <li><dialog>Inventory</dialog>
+                <ul>
+                    <li><span>[get]</span>/listings<legend>Getting List of Participating Products</legend></li>
+                    <li><span>[get]</span>/listings/product/:id<legend>Get Product Information</legend></li>
+                    <li><span>[post]</span>/listings/product/:id<legend>Add new Participating Product</legend></li>
+                    <li><span>[put]</span>/listings/product/:id<legend>Update Product Information (QTY)</legend></li>
+                    <li><span>[delete]</span>/listings/product/:id<legend>Remove product from participation</legend></li>
+                </ul>
+            </li>
+            <li><dialog>Offers</dialog>
+                <ul>
+                    <li><span>[get]</span>/offers<legend>Retrieve Offers</legend></li>
+                    <li><span>[get]</span>/offers/:upc<legend>Get Offers on a Product</legend></li>
+                    <li><span>[get]</span>/offer/:id<legend>Get Offers by ID</legend></li>
+                    <li><span>[post]</span>/offer/:id<legend>Create Offer by ID</legend></li>
+                    <li><span>[put]</span>/offer/:id<legend>Update Offer by ID</legend></li>
+                    <li><span>[delete]</span>/offer/:id<legend>Delete Offer by ID</legend></li>
+                </ul>
+            </li>
+            <li><dialog>Top Sellers</dialog>
+                <ul>
+                    <li> <span>[get]</span><a href="/topsellers">/topsellers</a></li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
